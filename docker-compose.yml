@@ -1,0 +1,26 @@
+Paso 4: docker-compose.yml
+services:
+  app:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./db:/var/www/db
+    depends_on:
+      - postgres
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: materias_db
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: materias_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
