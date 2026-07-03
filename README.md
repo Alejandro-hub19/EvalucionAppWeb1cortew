@@ -1,0 +1,4 @@
+# EvalucionAppWeb1cortew
+# PALLO PINTO DANIEL ALEJANDRO 
+# CI:1250064290
+# Paralelo "A" FECHA:03/07/2026
